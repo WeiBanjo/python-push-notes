@@ -9,9 +9,9 @@ def notify(push_token, title=None, push_body=None, iden=None):
     if push_body is None:
         push_body = ''
     if title is None:
-        title = 'Message from Push Notifier'
+        title = 'Message from Push Note'
 
-    if not push_token.starts_with('Bearer'):
+    if not push_token.startswith('Bearer'):
         push_token = 'Bearer {t}'.format(t=push_token.strip())
     data = {
         'type': 'note',
